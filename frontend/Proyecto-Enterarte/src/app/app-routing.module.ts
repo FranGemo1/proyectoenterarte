@@ -6,21 +6,21 @@ import { CreateEventComponent } from './components/create-event/create-event.com
 import { AboutComponent } from './components/about/about.component';
 import { ProfileUserComponent } from './components/profile-user/profile-user.component';
 import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { Error404Component } from './components/error404/error404.component';
 
 const routes: Routes = [
 
-  // si ingresan una url incorrecta, podemos redirigirlos a la página de inicio o a una página que muestre un error
-  // {path:'**', component: Error404Component, pathMatch: "full"}
-  {path:'**', redirectTo: '', pathMatch: "full"},
+  {path: 'home', component: HomeComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'events', component: EventsComponent, children:[
     {path: 'event', component: EventItemComponent}
   ]},
   {path: 'create-event', component: CreateEventComponent},
   {path: 'about', component: AboutComponent},
   {path: 'profile-user', component: ProfileUserComponent},
-  {path: 'login', component: LoginComponent}
-
-  
+  {path: 'login', component: LoginComponent},
+  {path:'**', component: Error404Component, pathMatch: "full"}  
 ];
 
 @NgModule({

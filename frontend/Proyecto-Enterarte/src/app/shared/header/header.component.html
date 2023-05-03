@@ -1,1 +1,52 @@
-<p>header works!</p>
+
+ <!-- HEADER -->
+ <header>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <img src="/assets/img/navbar.png" alt="">
+        </label>
+
+        <label class="logo"><img class="logo-img" src="/assets/img/Logo Enter Arte Solo PNG.png" alt=""><span style="font-weight: normal;">ENTER</span>arte</label>
+
+        <ul>
+            <li><a routerLink="/home">Inicio</a></li>
+
+            <li><a href="pages/event.html">Eventos</a></li>
+            <li><a href="pages/post.html">Publicar</a></li>
+            <li><a href="pages/about.html">Quienes somos</a></li>
+            <li><a href="pages/profileUser.html">Mi Cuenta</a></li>
+             <!--<li id="app"><a v-bind:href="url">{{ nombre }}</a></li>-->
+            <ul class="navbar-right">
+                <!--PC-->
+                <li id="pc">
+                    <a href="#" id="cart">
+                        <i class="fa"></i>
+                        <div class='cart icon-basket'>
+                            <span class='number'></span>
+                        </div>
+                    </a>
+                </li>
+                <!--MOVIL-->
+                <li id="movil">
+                    <a href="#" class="active">
+                        <i class="fa"></i>
+                        <div class='cart icon-basket'>
+                            <span class='number'></span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <div class='mini'>
+                <ul class="shopping-cart-items">
+                    <p class='products'>Vacío</p>
+                    <p class='names'></p>
+                    <p class='miniprice'></p>
+                    <a href="pages/cart.html" class="button">Revisar compra</a>
+                </ul>
+            </div>
+        </ul>
+    </nav>
+</header>
+<br><br>
