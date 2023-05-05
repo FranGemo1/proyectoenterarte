@@ -55,5 +55,4 @@ Documentación de reuniones.
 * **Julián Meneses** - [JulianMeneses1](http://github.com/JulianMenes1)
 * **Fernando Rosales** - [Fer-Rosales](https://github.com/Fer-Rosales)
 * **Soledad Orrego** - [sol2108](https://github.com/sol2108)
-* **Martín Sanchez** - [angelsmart86](https://github.com/angelsmart86)
 * **Gerardo Castellanos Torres** - [GCastelP](https://github.com/GCastelP)
