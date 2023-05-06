@@ -9,9 +9,10 @@ import { EventItemComponent } from './components/event-item/event-item.component
 import { CreateEventComponent } from './components/create-event/create-event.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProfileUserComponent } from './components/profile-user/profile-user.component';
-import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { Error404Component } from './components/error404/error404.component';
+import { RegistroComponent } from './auth/registro/registro.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +26,11 @@ import { Error404Component } from './components/error404/error404.component';
     ProfileUserComponent,
     LoginComponent,
     HomeComponent,
-    Error404Component
+    Error404Component,
+    RegistroComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
