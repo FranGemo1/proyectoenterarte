@@ -1,0 +1,112 @@
+ <main role="main">
+        <!-- FOTO PRINCIPAL -->
+        <section class="jumbotron text-center principal">
+            <div class="m-5">
+              
+                <h1 class="bienvenido-home">¡BIENVENID@S!</h1>
+                <h2 class="bienvenido-sub-home">Todos los eventos que buscás en un sólo lugar</h2>
+
+            </div>
+        </section>
+
+        <h1 style="display: none;">ENTERarte</h1>
+
+    </main>
+
+    <section class="section">
+
+        <!--DIV AGENDA-->
+
+        <div id="colorFondo">
+            <div class="banner">
+                <div class="container">
+                    <p style="margin-bottom: 0px;" class="texto-derecha floatR desaparece"><input type="text" name="buscador" placeholder="Buscar..." class="buscador" id="buscador"><button class="btn-search" id="buttonSearch"><i class="material-icons">Buscar</i></button></p>
+                    <div class="clearfix"></div>
+                    <br>
+                </div>
+            </div>
+            <div id="calendario-cont" class="calendario-cont">
+                <h5 class="calendariotitulo">CALENDARIO DE EVENTOS</h5>
+                <div id="calendario" class="calendario">
+                    <div class="calendar">
+                        <div class="calendar__info">
+                            <div class="calendar__prev" id="prev-month">&#9664;</div>
+                            <div class="calendar__month" id="month"></div>
+                            <div class="calendar__year" id="year"></div>
+                            <div class="calendar__next" id="next-month">&#9654;</div>
+                        </div>
+
+                        <div class="calendar__week">
+                            <div class="calendar__day calendar__item">Lun</div>
+                            <div class="calendar__day calendar__item">Mar</div>
+                            <div class="calendar__day calendar__item">Mie</div>
+                            <div class="calendar__day calendar__item">Jue</div>
+                            <div class="calendar__day calendar__item">Vie</div>
+                            <div class="calendar__day calendar__item">Sab</div>
+                            <div class="calendar__day calendar__item">Dom</div>
+                        </div>
+
+                        <div class="calendar__dates" id="dates"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--DIV CAROUSEL-->
+
+        <div class="prox-eventos-contenedor">
+            <div>
+                <h2 class="prox-eventos">Próximos Eventos</h2>
+            </div>
+
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/assets/img/circo.jpg" class="d-block w-100" alt="circo">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>CIRCO</h3>
+                            <em><p>15/10</p></em>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/musica.jpg" class="d-block w-100" alt="musica">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>LOS PALMERA</h3>
+                            <em><p>20/10</p></em>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/teatro.jpg" class="d-block w-100" alt="teatro">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>OBRA ABSURDA</h3>
+                            <em><p>27/10</p></em>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+            </div>
+        </div>
+
+        <!--DIV PUBLICIDAD-->
+
+
+        <div class="divbootstrap">          
+            <article id="results"></article>
+        </div>
+        
+
+    </section>

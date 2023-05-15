@@ -11,16 +11,15 @@
 
         <ul>
             <li><a routerLink="/home">Inicio</a></li>
-
-            <li><a href="pages/event.html">Eventos</a></li>
-            <li><a href="pages/post.html">Publicar</a></li>
-            <li><a href="pages/about.html">Quienes somos</a></li>
-            <li><a href="pages/profileUser.html">Mi Cuenta</a></li>
+            <li><a routerLink="events">Eventos</a></li>
+            <li><a routerLink="create-event">Publicar</a></li>
+            <li><a routerLink="about">Quienes somos</a></li>
+            <li><a routerLink="profile-user">Mi Cuenta</a></li>
              <!--<li id="app"><a v-bind:href="url">{{ nombre }}</a></li>-->
             <ul class="navbar-right">
                 <!--PC-->
                 <li id="pc">
-                    <a href="#" id="cart">
+                    <a routerLink="cart" id="cart">
                         <i class="fa"></i>
                         <div class='cart icon-basket'>
                             <span class='number'></span>
@@ -29,7 +28,7 @@
                 </li>
                 <!--MOVIL-->
                 <li id="movil">
-                    <a href="#" class="active">
+                    <a routerLink="cart" class="active">
                         <i class="fa"></i>
                         <div class='cart icon-basket'>
                             <span class='number'></span>

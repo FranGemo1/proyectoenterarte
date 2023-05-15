@@ -53,6 +53,5 @@ Documentación de reuniones.
 * **Francisco Germolotto** - [FranGemo1](https://github.com/FranGemo1)
 * **Karen Pigni** - [Karen-Pigni](https://github.com/Karen-Pigni)
 * **Julián Meneses** - [JulianMeneses1](http://github.com/JulianMenes1)
-* **Fernando Rosales** - [Fer-Rosales](https://github.com/Fer-Rosales)
 * **Soledad Orrego** - [sol2108](https://github.com/sol2108)
 * **Gerardo Castellanos Torres** - [GCastelP](https://github.com/GCastelP)
