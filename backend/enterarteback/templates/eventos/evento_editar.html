@@ -1,0 +1,23 @@
+<!-- evento_editar.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar evento</title>
+</head>
+<body>
+    <h1>Editar evento</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="idUser">ID del usuario:</label>
+        <input type="number" name="idUser" id="idUser" value="{{ evento.idUser }}" required><br>
+
+        <label for="idTicket">ID del ticket:</label>
+        <input type="number" name="idTicket" id="idTicket" value="{{ evento.idTicket }}" required><br>
+
+        <button type="submit">Guardar cambios</button>
+    </form>
+
+    <a href="{% url 'evento_lista' %}">Volver a la lista de eventos</a>
+</body>
+</html>

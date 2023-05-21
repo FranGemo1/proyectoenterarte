@@ -1,0 +1,16 @@
+<!-- evento_detalle.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalles del evento</title>
+</head>
+<body>
+    <h1>Detalles del evento</h1>
+
+    <p>ID del evento: {{ evento.idEvento }}</p>
+    <p>ID del usuario: {{ evento.idUser }}</p>
+    <p>ID del ticket: {{ evento.idTicket }}</p>
+
+    <a href="{% url 'evento_lista' %}">Volver a la lista de eventos</a>
+</body>
+</html>

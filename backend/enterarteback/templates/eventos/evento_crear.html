@@ -1,0 +1,26 @@
+<!-- evento_crear.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear nuevo evento</title>
+</head>
+<body>
+    <h1>Crear nuevo evento</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="idEvento">ID del evento:</label>
+        <input type="number" name="idEvento" id="idEvento" required><br>
+
+        <label for="idUser">ID del usuario:</label>
+        <input type="number" name="idUser" id="idUser" required><br>
+
+        <label for="idTicket">ID del ticket:</label>
+        <input type="number" name="idTicket" id="idTicket" required><br>
+
+        <button type="submit">Guardar evento</button>
+    </form>
+
+    <a href="{% url 'evento_lista' %}">Volver a la lista de eventos</a>
+</body>
+</html>
