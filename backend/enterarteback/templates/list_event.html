@@ -1,0 +1,19 @@
+<!-- list_event.html -->
+{% load static %}
+
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+<h1>Lista de Eventos</h1>
+<ul>
+  {% for event in events %}
+    <li>{{ event.name }} - {{ event.price }}</li>
+  {% empty %}
+    <li>No hay eventos disponibles.</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'create_event' %}">Crear nuevo evento</a>
+</body>
+</html>

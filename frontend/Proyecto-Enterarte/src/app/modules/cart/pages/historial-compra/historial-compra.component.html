@@ -1,0 +1,23 @@
+
+<section class="record">
+    <div>
+        <table *ngIf="HistorialCompra">
+            <thead>
+                    
+                    <th>Evento</th>
+                    <th>Monto</th>
+                    <th>Fecha</th>
+                    <th>hora</th>
+            </thead>
+            <tr *ngFor="let element of Historial">
+                <td>{{element.evento}}</td>
+                <td>{{element.monto|currency}}</td>
+                <td>{{today|date: "d/M/yy"}}</td>
+                <td>{{element.hora}}</td>
+                    
+            </tr>
+        </table>
+
+    </div>
+
+</section>
