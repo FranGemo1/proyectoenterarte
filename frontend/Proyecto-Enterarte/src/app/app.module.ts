@@ -14,12 +14,6 @@ import { HomeModule } from './modules/home/home.module';
 import { ProfileUserModule } from './modules/profile-user/profile-user.module';
 import { HttpClientModule } from '@angular/common/http';
 
-
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
