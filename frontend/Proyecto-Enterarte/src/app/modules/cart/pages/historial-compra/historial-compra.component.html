@@ -1,0 +1,23 @@
+
+<section class="record">
+    <div>
+        <table *ngIf="mostrarHistorial">
+            <thead>
+                    
+                    <th>Evento</th>
+                    <th>Monto</th>
+                    <th>Fecha</th>
+                    <th>hora</th>
+            </thead>
+            <tr *ngFor="let element of historialA">
+                <td>{{element.evento}}</td>
+                <td>{{element.monto|currency}}</td>
+                <td>{{element.fecha}}</td>
+                <td>{{element.hora}}</td>
+                    
+            </tr>
+        </table>
+
+    </div>
+
+</section>

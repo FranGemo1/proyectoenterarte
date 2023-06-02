@@ -71,10 +71,9 @@ nav ul li a {
 
 a.active,
 a:hover {
-    /*background: rgb(241, 210, 33);*/
+    background: rgb(241, 210, 33);
     transition: .5s;
 }
-
 .checkbtn {
     font-size: 30px;
     color: white;

@@ -1,21 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './pages/cart/cart.component';
-import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { FdepagosComponent } from './pages/fdepagos/fdepagos.component';
+import { HistorialCompraComponent } from './pages/historial-compra/historial-compra.component';
+
+
 
 const routes: Routes = [
-  {path: '',
+  {path:'',
   component: CartComponent
   },
-  {
-    path:"cart-item", 
-    component: CartItemComponent, 
-    pathMatch: "full"
+  {path:'pagos',
+  component: FdepagosComponent
+  },
+  {path:'historial',
+  component: HistorialCompraComponent
   }
+  
 ];
 
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
+  @NgModule({
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
+  })
+
 export class CartRoutingModule { }

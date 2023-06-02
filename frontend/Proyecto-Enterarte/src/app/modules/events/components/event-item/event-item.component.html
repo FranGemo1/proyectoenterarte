@@ -1,1 +1,29 @@
-<p>event-item works!</p>
+<section class="sectionInfo">
+    <div class="imgInfo">
+        <img [src]="event.img" *ngIf="event"/>
+    </div>
+    
+    <div class="listInfo" *ngIf="event">
+        <ul>
+            <li>Nombre: {{event.name}}</li>
+            <li>Genero: {{event.gender}}</li>
+            <li *ngIf="event.date">Fecha: {{event.date}}</li>
+            <li *ngIf="event.day">Día: {{event.day}}</li>            
+            <li>Categoria: {{event.category}}</li>
+            <li>Direccion: {{event.street}} {{event.number}}</li>
+            <li>Descripcion: {{event.description}}</li>
+            <li *ngIf="event.social_networks.website || event.social_networks.facebook || event.social_networks.instagram">Nuestras redes sociales:</li>
+                <ul>
+                   <li *ngIf="event.social_networks.instagram">
+                     <a [href]="event.social_networks.instagram">Instagram</a>
+                   </li>
+                   <li *ngIf="event.social_networks.facebook">
+                    <a [href]="event.social_networks.facebook">Facebook</a>
+                  </li>
+                  <li *ngIf="event.social_networks.website">
+                    <a [href]="event.social_networks.website">Sitio</a>
+                  </li>
+                </ul> 
+        </ul>
+    </div>
+</section>

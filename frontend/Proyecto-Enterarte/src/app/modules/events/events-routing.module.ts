@@ -8,7 +8,7 @@ const routes: Routes = [
   component: EventsComponent
   },
   {
-    path:"event-item", 
+    path:"event-item/:id", 
     component: EventItemComponent, 
     pathMatch: "full"
   }

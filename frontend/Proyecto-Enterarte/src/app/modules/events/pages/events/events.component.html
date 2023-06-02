@@ -1,1 +1,83 @@
-<p>events works!</p>
+<div class="botonera">
+    <button type="button" class="boton teatro" (click)="filterEvents('Teatro')">Teatro</button>
+    <button type="button" class="boton musica" (click)="filterEvents('Música')">Música</button>
+    <button type="button" class="boton arte" (click)="filterEvents('Artes visuales')">Artes visuales</button>
+    <button type="button" class="boton infantiles" (click)="filterEvents('Infantiles')">Infantiles</button>
+</div>
+<div class="botonsolo">
+    <button type="button" class="botontodos" category="todos" (click)="showAllEvents()">Todos los eventos</button>
+</div>
+<div class="prox-evento">
+    <h1>EVENTOS</h1>    
+</div>
+<div class='containerCarrito mb-5' id="app">    
+
+    <!--EVENTOS-->
+
+    <h2 style="font-size: 2rem; font-family: sans-serif; color:  white; ">PRÓXIMOS</h2>
+
+    <div *ngFor="let event of events | categoryFilter:'evento'" class='product'>
+        <img [src]="event.img">
+        <h2 class='header'>{{event.name}}</h2>
+        <p>{{event.gender}}</p>
+        <p class='description'>{{event.description}}</p>
+        <p class='price'>{{event.price}}</p>        
+        <div class='quickview'>            
+            <a routerLink="event-item/{{event.id}}">Info</a>
+        </div>
+        <div class='btn btn_comprar'>Comprar</div>
+        <div class='btn btn_agregar' style="left:10px;">Agregar al Carrito</div>
+    </div>
+    
+    <!--EVENTOS SEMANALES-->
+
+    <h2 style="font-size: 2rem; font-family: sans-serif; color: white; ">SEMANALES</h2>
+    <div *ngFor="let event of events | categoryFilter:'semanal'" class='product'>
+        <img [src]="event.img">
+        <h2 class='header'>{{event.name}}</h2>
+        <p>{{event.gender}}</p>
+        <p class='description'>{{event.description}}</p>
+        <p class='price'>{{event.price}}</p>        
+        <div class='quickview'>            
+            <a routerLink="event-item/{{event.id}}">Info</a>
+        </div>
+        <div class='btn btn_comprar'>Comprar</div>
+        <div class='btn btn_agregar' style="left:10px;">Agregar al Carrito</div>
+    </div>
+
+    <!--EVENTOS MENSUALES-->
+
+    <h2 style="font-size: 2rem; font-family: sans-serif; color: white; ">MENSUALES</h2>
+    <div *ngFor="let event of events | categoryFilter:mensual" class='product'>
+        <img [src]="event.img">
+        <h2 class='header'>{{event.name}}</h2>
+        <p>{{event.gender}}</p>
+        <p class='description'>{{event.description}}</p>
+        <p class='price'>{{event.price}}</p>        
+        <div class='quickview'>            
+            <a routerLink="event-item/{{event.id}}">Info</a>
+        </div>
+        <div class='btn btn_comprar'>Comprar</div>
+        <div class='btn btn_agregar' style="left:10px;">Agregar al Carrito</div>
+    </div>
+
+    <!--ESPACIOS CULTURALES-->
+
+    <h2 style="font-size: 2rem; font-family: sans-serif; color: white; ">ESPACIOS CULTURALES</h2>
+    <div *ngFor="let event of events | categoryFilter:'espacio cultural'" class='product'>
+        <img [src]="event.img">
+        <h2 class='header'>{{event.name}}</h2>
+        <p>{{event.gender}}</p>
+        <p class='description'>{{event.description}}</p>
+        <p class='price'>{{event.price}}</p>        
+        <div class='quickview'>            
+            <a routerLink="event-item/{{event.id}}">Info</a>
+        </div>
+        <div class='btn btn_comprar'>Comprar</div>
+        <div class='btn btn_agregar' style="left:10px;">Agregar al Carrito</div>
+    </div>
+
+    
+</div>
+
+

@@ -1,21 +1,25 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { CartRoutingModule } from './cart-routing.module';
 import { CartComponent } from './pages/cart/cart.component';
-import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { FdepagosComponent } from './pages/fdepagos/fdepagos.component';
+import { HistorialCompraComponent } from './pages/historial-compra/historial-compra.component';
+
+
 
 
 
 
 @NgModule({
   declarations: [
-    CartComponent,
-    CartItemComponent
-  ],
+    CartComponent,FdepagosComponent,HistorialCompraComponent
+      ],
   imports: [
     CommonModule,
-    CartRoutingModule
-  ]
+   CartRoutingModule
+    
+  ],
+  
+  
 })
 export class CartModule { }
