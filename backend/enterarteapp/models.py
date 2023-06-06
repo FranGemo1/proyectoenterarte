@@ -1,19 +1,14 @@
-from django.db import models
-
-# Create your models here.
 import random
-from django.db import models
-from django.core.validators import MinValueValidator, MaxValueValidator
-from django.core.exceptions import ValidationError
-
 from typing import Iterable, Optional
 from django.db import models
 from django.contrib.auth.models import User
 from django.dispatch import receiver
-
 from django.urls import reverse
-from django_rest_passwordreset.signals import reset_password_token_created 
+from django_rest_passwordreset.signals import reset_password_token_created
 from django.core.mail import send_mail 
+from django.core.validators import MinValueValidator, MaxValueValidator
+
+# Create your models here.
 
 class Category(models.Model):
     name = models.CharField(max_length=50)
@@ -34,7 +29,7 @@ class Article(models.Model):
 
     def __str__(self):
         return self.name
-    
+
 class Client(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100, null=True, blank=True)
@@ -47,13 +42,15 @@ class Client(models.Model):
         return f"{self.user.email}"
     
     def save(self, *args, **kwargs):
-        # Concatenate el primer name y el lastName para set el campo name
+        # Concatenar el primer nombre y el apellido para establecer el campo name
         self.name = f"{self.user.first_name} {self.user.last_name}"
         # Llamar al método save del modelo padre para guardar los cambios
         super().save(*args, **kwargs)
     
     def __str__(self):
             return self.name
+    
+
 
 class Review(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
@@ -63,6 +60,15 @@ class Review(models.Model):
 
     def __str__(self):
         return str(self.id)
+    
+class Coment(models.Model):
+    client = models.ForeignKey(Client, on_delete=models.CASCADE) #relacion de uno a uno con la tabla Client
+    description = models.CharField(max_length=140) #maximo 140 caracteres
+    classification = models.IntegerField(validators=[MaxValueValidator(5)], default=1) #solo numeros positivos por defecto 1 y maximo 5
+    created_at = models.DateTimeField(auto_now_add=True) #fecha de creacion
+
+    def __str__(self):
+        return str(self.id)    
     
 class Cart(models.Model):
     client = models.ForeignKey(Client, on_delete=models.DO_NOTHING, null=True, blank=True)
@@ -93,24 +99,6 @@ class CartDetail(models.Model):
     def save(self, *args, **kwargs): 
         self.amount = self.item.price * self.quantity
         super().save(*args, **kwargs)
-
-
-
-@receiver(reset_password_token_created)
-def password_reset_token_created(sender, instance, reset_password_token, *args, **kwargs): #obtiene el token
-
-    email_plaintext_message = "{}?token={}".format(reverse('password_reset:reset-password-request'), reset_password_token.key)
-
-    send_mail( #envia el mail
-        # title:
-        "Password Reset for {title}".format(title="Restablecer Contraseña"),#un titulo
-        # message:
-        email_plaintext_message,
-        # from:
-        "enterspace.ar@gmail.com",
-        # to:
-        [reset_password_token.user.email]
-    )
 
 
 class Event(models.Model):
@@ -211,3 +199,21 @@ class Roles(models.Model):
     rol=models.CharField(max_length=15,blank=False)
     id_user=models.ForeignKey("User", to_field="id_user", on_delete=models.CASCADE)
     id_permission=models.ForeignKey("Permissions", to_field="id_permission", on_delete=models.CASCADE)        
+
+
+
+@receiver(reset_password_token_created)
+def password_reset_token_created(sender, instance, reset_password_token, *args, **kwargs): #obtiene el token
+
+    email_plaintext_message = "{}?token={}".format(reverse('password_reset:reset-password-request'), reset_password_token.key)
+
+    send_mail( #envia el mail
+        # title:
+        "Password Reset for {title}".format(title="Restablecer Contraseña"),#un titulo
+        # message:
+        email_plaintext_message,
+        # from:
+        "enterspace.ar@gmail.com",
+        # to:
+        [reset_password_token.user.email]
+    )

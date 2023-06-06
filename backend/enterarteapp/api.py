@@ -1,7 +1,7 @@
 from .models import *
 from .serializers import *
 from django.core.exceptions import ValidationError as DjangoValidationError
-from django.contrib.auth.hashers import check_password
+from django.contrib.auth.hashers import check_password, make_password
 from django.contrib.auth.password_validation import validate_password
 from rest_framework import viewsets, permissions, status
 from rest_framework.response import Response
@@ -23,6 +23,11 @@ class ReviewViewSet(viewsets.ModelViewSet):
     queryset = Review.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = ReviewSerializer
+    
+class ComentViewSet(viewsets.ModelViewSet):
+    queryset = Coment.objects.all()
+    permission_classes = [permissions.AllowAny]
+    serializer_class = ComentSerializer
 
 class CartViewSet(viewsets.ModelViewSet):
     queryset = Cart.objects.all()
