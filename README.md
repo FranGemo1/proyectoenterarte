@@ -49,8 +49,7 @@ Documentación de reuniones.
 
 ## Autores ✒️
 
-* **Tayhana Villarreal** - [tayVillarreal](https://github.com/tayVillarreal)
-* **Francisco Germolotto** - [FranGemo1](https://github.com/FranGemo1)
+* **Tayhana Villarreal** - [tayVillarreal](https://github.com/tayVillarreal)  
 * **Karen Pigni** - [Karen-Pigni](https://github.com/Karen-Pigni)
 * **Julián Meneses** - [JulianMeneses1](http://github.com/JulianMenes1)
 * **Soledad Orrego** - [sol2108](https://github.com/sol2108)

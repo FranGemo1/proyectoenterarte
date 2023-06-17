@@ -70,10 +70,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'enterarteback.urls'
 
-#add MEDIA
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
-MEDIA_URL = '/media/' 
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -91,6 +87,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'enterarteback.wsgi.application'
+
+AUTH_USER_MODEL = 'enterarteapp.Client' #add User Model
 
 
 # Database
@@ -175,28 +173,32 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField' #add BigAutoField
 #add REST
 REST_FRAMEWORK = { 
     "DEFAULT_AUTHENTICATION_CLASSES": [
-        "rest_framework.authentication.TokenAuthentication",
+        'enterarteapp.authentication.BearerAuthentication', #add BearerAuthentication
     ]
 }
 
-#add allauth
-SOCIALACCOUNT_PROVIDERS = { 
-    "google": {
-        "APP": {
-            "client_id": "",  # replace whit your client_id
-            "secret": "",        # replace whit your secret
-            "key": "",                               # leave empty
-        },
-        "SCOPE": [
-            "profile",
-            "email",
-        ],
-        "AUTH_PARAMS": {
-            "access_type": "online",
-        },
-        "VERIFIED_EMAIL": True,
-    },
+REST_AUTH_REGISTER_SERIALIZERS = {
+    'REGISTER_SERIALIZER': 'enterarteapp.serializers.RegisterSerializer',  #add RegisterSerializer
 }
+
+# #add allauth
+# SOCIALACCOUNT_PROVIDERS = { 
+#     "google": {
+#         "APP": {
+#             "client_id": "",  # replace whit your client_id
+#             "secret": "",        # replace whit your secret
+#             "key": "",                               # leave empty
+#         },
+#         "SCOPE": [
+#             "profile",
+#             "email",
+#         ],
+#         "AUTH_PARAMS": {
+#             "access_type": "online",
+#         },
+#         "VERIFIED_EMAIL": True,
+#     },
+# }
 
 #LOGIN_REDIRECT_URL ='https://localhost:4200/producto'
 
@@ -224,7 +226,8 @@ AUTHENTICATION_BACKENDS = {
 from decouple import config # esto sirve para que acepte lo de la variable de entorno
 
 # todo esto esta configutado en un .env "variable de entorno"
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # Backend a utilizar para el envío de correos electrónicos
 EMAIL_HOST =  config('EMAIL_HOST')  # Dirección del servidor SMTP
 EMAIL_PORT =  config('EMAIL_PORT')  # Puerto del servidor SMTP
 EMAIL_USE_TLS =  True  # Utiliza TLS para una conexión segura
@@ -237,5 +240,8 @@ SITE_ID = 1 # Le decimos a django que utilice el primer sitio como predeterminad
 
 ACCOUNT_EMAIL_VERIFICATION = "none" # Le decimos a django que no envie un mail de verificacion
 ACCOUNT_AUTHENTICATION_METHOD = "email" # Le decimos a django que el metodo de autenticacion sera el email
-ACCOUNT_EMAIL_REQUIRED = True   # Le decimos a django que el email es requerido
+ACCOUNT_EMAIL_REQUIRED = True # Le decimos a django que el email es requerido
+ACCOUNT_UNIQUE_EMAIL = True  # Le decimos a django que el email debe ser unico
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None  # Le decimos a allauth que no utilice el username
+ACCOUNT_USERNAME_REQUIRED = False # Le decimos a django que el username no es requerido
 SOCIALACCOUNT_PROVIDERS = {'google': {'SCOPE': ['profile', 'email']}}   # Le decimos a django que queremos obtener el email y el perfil de google
