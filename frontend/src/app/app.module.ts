@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { StoreModule } from './modules/store/store.module';
@@ -22,7 +22,8 @@ import { EventsModule } from './modules/events/events.module';
     ProfileModule,
     AdminModule,
     StoreModule,
-    EventsModule
+    EventsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],

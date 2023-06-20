@@ -18,9 +18,7 @@ En el flujo de trabajo Gitflow utilizado por el equipo, se utilizan varias ramas
 
 Main: Esta es la rama principal del proyecto, donde se encuentra el código estable y listo para ser entregado al cliente. Se espera que el código en esta rama sea siempre funcional y libre de errores críticos.
 
-Release: La rama de lanzamiento se crea cuando se están preparando para lanzar una nueva versión del software al cliente. En esta rama se realizan las últimas pruebas, se corrigen errores menores y se realizan ajustes finales antes de que el software se entregue al cliente.
-
-Developer: Esta rama es donde los desarrolladores trabajan en nuevas funcionalidades o en la refactorización del código existente. Cada desarrollador puede tener su propia rama de desarrollador derivada de la rama principal, donde se trabaja en el código de manera independiente.
+Develop: Esta rama es donde los desarrolladores trabajan en nuevas funcionalidades o en la refactorización del código existente. Cada desarrollador puede tener su propia rama de desarrollador derivada de la rama principal, donde se trabaja en el código de manera independiente.
 
 Rama de cada integrante: Las ramas de esta característica se crean a partir de la rama "developer", y se utilizan para desarrollar nuevas funcionalidades para el software. Una vez que la funcionalidad está completa, la rama de la característica se integra en la rama "developer", donde se lleva a cabo la integración del código.
 

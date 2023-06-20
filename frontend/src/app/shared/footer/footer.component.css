@@ -11,7 +11,7 @@
 footer {
     width: 100%;
     background: rgb(226, 78, 66);
-    background: linear-gradient(162deg, rgba(226, 78, 66, 0.8883928571428571) 0%, rgba(0, 0, 0, 0.9668242296918768) 15%, rgba(8, 3, 2, 1) 38%);
+    background: linear-gradient(162deg, #198754 0%, rgba(0, 0, 0, 0.9668242296918768) 15%, rgba(8, 3, 2, 1) 38%);
     color: white;
 }
 
@@ -107,5 +107,5 @@ footer {
 }
 
 .link-footer {
-    color: #008F95;
+    color: #198754;
 }
