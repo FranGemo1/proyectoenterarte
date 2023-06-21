@@ -18,11 +18,9 @@ En el flujo de trabajo Gitflow utilizado por el equipo, se utilizan varias ramas
 
 Main: Esta es la rama principal del proyecto, donde se encuentra el código estable y listo para ser entregado al cliente. Se espera que el código en esta rama sea siempre funcional y libre de errores críticos.
 
-Release: La rama de lanzamiento se crea cuando se están preparando para lanzar una nueva versión del software al cliente. En esta rama se realizan las últimas pruebas, se corrigen errores menores y se realizan ajustes finales antes de que el software se entregue al cliente.
+Develop: Esta rama es donde los desarrolladores trabajan en nuevas funcionalidades o en la refactorización del código existente. Cada desarrollador puede tener su propia rama de desarrollador derivada de la rama principal, donde se trabaja en el código de manera independiente.
 
-Developer: Esta rama es donde los desarrolladores trabajan en nuevas funcionalidades o en la refactorización del código existente. Cada desarrollador puede tener su propia rama de desarrollador derivada de la rama principal, donde se trabaja en el código de manera independiente.
-
-Rama de cada integrante: Las ramas de esta característica se crean a partir de la rama "developer", y se utilizan para desarrollar nuevas funcionalidades para el software. Una vez que la funcionalidad está completa, la rama de la característica se integra en la rama "developer", donde se lleva a cabo la integración del código.
+Rama de cada integrante: Las ramas de esta característica se crean a partir de la rama "develop", y se utilizan para desarrollar nuevas funcionalidades para el software. Una vez que la funcionalidad está completa, la rama de la característica se integra en la rama "developer", donde se lleva a cabo la integración del código.
 
 Hotfix: Si surge un problema crítico en la versión actual del software, se crea una rama de Hotfix para solucionar el problema lo antes posible. La rama Hotfix se deriva de la rama principal, y después de que se ha corregido el problema, se integra de nuevo en la rama principal.
 
@@ -30,15 +28,13 @@ Al utilizar este flujo de trabajo, el equipo puede trabajar de manera más efici
 
 ## Despliegue 📦
 
-El sitio web está en deploy en el siguiente link: [ENTERarte](https://matiasp23.github.io/proyecto-fullstack-ispc-2022.github.io/front/view/home.html)
-
 El sitio web de nuestra organización hecho en Wordpress: [ENTERspace](http://enterspace.rf.gd/)  
 
 ## Construido con 🛠️
 
 HTML5, CSS, Bootstrap y JS.  
 TypeScript y Angular,  
-Python y MySQL.    
+Python, Django y MySQL.    
 GIT.    
 Metodologías ágiles.  
   
@@ -47,6 +43,8 @@ Metodologías ágiles.
 Pueden encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/FranGemo1/proyectoenterarte/wiki)  
 Documentación de reuniones.
 
+
+Nuestra demo la pueden encontrar en el siguiente link [DEMO](https://drive.google.com/drive/folders/1jOD-WzFWd3hxzRysgpP3p63fdKQXJLBa?usp=drive_link) 
 ## Autores ✒️
 
 * **Tayhana Villarreal** - [tayVillarreal](https://github.com/tayVillarreal)  
