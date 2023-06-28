@@ -20,7 +20,7 @@ Main: Esta es la rama principal del proyecto, donde se encuentra el código esta
 
 Develop: Esta rama es donde los desarrolladores trabajan en nuevas funcionalidades o en la refactorización del código existente. Cada desarrollador puede tener su propia rama de desarrollador derivada de la rama principal, donde se trabaja en el código de manera independiente.
 
-Rama de cada integrante: Las ramas de esta característica se crean a partir de la rama "develop", y se utilizan para desarrollar nuevas funcionalidades para el software. Una vez que la funcionalidad está completa, la rama de la característica se integra en la rama "developer", donde se lleva a cabo la integración del código.
+Rama de cada integrante: Las ramas de esta característica se crean a partir de la rama "develop", y se utilizan para desarrollar nuevas funcionalidades para el software. Una vez que la funcionalidad está completa, la rama de la característica se integra en la rama "develop", donde se lleva a cabo la integración del código.
 
 Hotfix: Si surge un problema crítico en la versión actual del software, se crea una rama de Hotfix para solucionar el problema lo antes posible. La rama Hotfix se deriva de la rama principal, y después de que se ha corregido el problema, se integra de nuevo en la rama principal.
 
